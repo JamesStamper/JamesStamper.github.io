@@ -9,7 +9,8 @@
      var CANVAS_WIDTH = 500;
      var CANVAS_HEIGHT = 300;
      // Radius of the ball
-     var BALL_RADIUS = 20;
+     var BALL_RADIUS = 30;
+     var BALL_RADIUS2 = 15;
      // Color of the ball
      var BALL_COLOR = "#bd2c00";
      var BALL_COLOR2 = "#1500cc";
@@ -19,9 +20,9 @@
      var ballX2 = CANVAS_WIDTH / 2;
      var ballY2 = CANVAS_HEIGHT / 2;   
      // The current speed of the ball
-     var dx = 4;
-     var dy = 4;
-     var dx2 = -2;
+     var dx = 6;
+     var dy = 10;
+     var dx2 = -8;
      var dy2 = 4   
     /**
      * This function takes a 2d canvas context and draws a ball on it at ballX and ballY
@@ -94,7 +95,7 @@
      </head>              
         <body>
            <h1>Bouncy Ball</h1>
-           <canvas id="bounceCanvas" width="500" height="300"></canvas>
+           <canvas id="bounceCanvas" width="700" height="900"></canvas>
    </body>
 </html>
         
