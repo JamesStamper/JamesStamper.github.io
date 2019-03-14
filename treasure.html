@@ -31,6 +31,9 @@
     {
       var xDifference = event.offsetX - treasure.x;
       var yDifference = event.offsetY - treasure.y:
+      return Math.sqrt((xDifference * xDifference) +
+                       (yDifference * yDifference)); // Pythagorean Theorem
+    }
       
   </script>
   
