@@ -37,7 +37,7 @@
       
     var clicks = 0;
     
-    $("map").click(function (event){
+    $("#map").click(function (event){
       // click handler code goes here
       // check for distance
       var distance = getDistanceToTreasure(event, treasure);
@@ -49,9 +49,27 @@
       }
       else{
         // give a hint if they are too far away
+        Hints(distance);
       }
       clicks++;
     });
+    
+    var Hints = function(distance)
+    {
+      if (distance <= 13)
+      {
+         $("#distance").setText("You're on fire!");
+      }
+      else if(distance <= 20)
+      {
+         $("#distance").setText("You're hot!");
+      }
+      if (distance <= 60)
+      {
+         $("#distance").setText("You're warm!");
+      }
+      
+    };
   </script>
   
 </body>
