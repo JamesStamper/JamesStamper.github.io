@@ -64,12 +64,23 @@
       {
          $("#distance").setText("You're hot!");
       }
-      if (distance <= 60)
+      else if (distance <= 60)
       {
          $("#distance").setText("You're warm!");
       }
-      
-    };
+      else if(distance <= 150)
+      {
+        $("#distance").setText("You're slightly cold!");
+      }      
+      else if (distance <= 225)
+      {
+        $("#distance").setText("You're cold!");  
+      }
+      else if(distance <= 350)
+      {
+         $("#distance").setText("You're cold!"); 
+      }
+      };
   </script>
   
 </body>
