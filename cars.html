@@ -14,30 +14,30 @@ this.y = y;
 };
 var tesla = new Car(10,20);
 
-var drawCar = function(car)
+var Car.prototype.draw = function()
 {
 var carHtml = '<img src="https://nostarch.com/images/car.png">';
 
-var carElement = $(carHtml);
+this.carElement = $(carHtml);
 
-carElement.css({
+this.carElement.css({
 position: "absolute",
-left: car.x,
-top: car.y
+left: this.x,
+top: this.y
 });
 
 $("body").append(carElement);
 };
 
-drawCar(tesla);
+tesla.draw();
 var nissan = new Car(100, 200);
-drawCar(nissan);
+nissan.draw();
 var Buick = new Car(25, 50); 
-drawCar(Buick);
+Buick.draw();
 var Mercades = new Car(250, 500);
-drawCar(Mercades);
+Mercades.draw();
 var Chevy = new Car(150, 300);
-drawCar(Chevy);
+Chevy.draw();
 </script>
 </body>
 </html>
