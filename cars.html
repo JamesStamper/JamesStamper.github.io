@@ -28,16 +28,41 @@ top: this.y
 
 $("body").append(this.carElement);
 };
+  
+  Car.prototype.moveRight = function()
+  {
+    this.x += 5;
 
+    this.carElement.css({
+left: this.x,
+top: this.y
+    });
+  };
+  
 tesla.draw();
+tesla.moveRight();
+tesla.moveRight();
+tesla.moveRight();
 var nissan = new Car(100, 200);
 nissan.draw();
+nissan.moveRight();
+nissan.moveRight();
+nissan.moveRight();
 var Buick = new Car(25, 50); 
 Buick.draw();
+Buick.moveRight();
+Buick.moveRight();
+Buick.moveRight();
 var Mercades = new Car(250, 500);
 Mercades.draw();
+Mercades.moveRight();
+Mercades.moveRight();
+Mercades.moveRight();
 var Chevy = new Car(150, 300);
 Chevy.draw();
+Chevy.moveRight();
+Chevy.moveRight();
+Chevy.moveRight();
 </script>
 </body>
 </html>
