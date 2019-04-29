@@ -29,38 +29,38 @@
            //the game loop
           while (remainingLetters > 0)
           {
-          //show player their progress
-          alert(answerArray.join(" "));
+            //show player their progress
+            alert(answerArray.join(" "));
           
-          //get a guess form the player
-          var guess = prompt("please guess a single letter");
-          if (guess === null)
-          {
-          //quit
-          break;
-          }else if(guess.length !== 1)
-          {
-          alert("you must enter only a SINGlE letter!");
-          }else{
-          for(var j = 0; j < word.length; j++)
-          {
-            if(word[j] === guess)
+            //get a guess form the player
+            var guess = prompt("please guess a single letter");
+            if (guess === null)
             {
-               answerArray[j] = guess;
-               remainingLetters--;
-             }else{
-                lives --;
-                if(lives === 5)
-                {
-                   head()
-                }else if(lives === 4)
-                {
-                   body();
-                }
-             
-           }
-         }
-       }
+               //quit
+               break;
+            }else if(guess.length !== 1)
+            {
+               alert("you must enter only a SINGlE letter!");
+            }else{
+               for(var j = 0; j < word.length; j++)
+               {
+                  if(word[j] === guess)
+                  {
+                     answerArray[j] = guess;
+                     remainingLetters--;
+                  }else{
+                     lives --;
+                     if(lives === 5)
+                     {
+                        head();
+                     }else if(lives === 4)
+                     {
+                        body();
+                     }
+                  }
+               }
+            }
+          }
        ctx.strokeStyle = "black";
        ctx.lineWidth = 2;
              
