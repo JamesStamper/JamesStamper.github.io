@@ -9,7 +9,7 @@
           <script>
              var canvas = document.getElementById("canvas");
              var ctx = canvas.getContext("2d");
-             var lives = 6;
+             var lives = 5;
           //Create a list of words to choose from
           var words = ["javascript", "monkey", "amazing", "amazing",
            "pancake"];
@@ -50,13 +50,23 @@
                      remainingLetters--;
                   }else{
                      lives --;
-                     if(lives === 5)
+                     if(lives === 4)
                      {
                         head();
-                     }else if(lives === 4)
+                     }else if(lives === 3)
                      {
                         body();
-                     }
+                     }else if(lives === 2)
+                     { 
+                        rightLeg();
+                     }else if(lives === 1)
+                     {
+                        leftLeg();
+                     }else if(lives === 0)
+                     {
+                        arms();
+                        
+                                 
                   }
                }
             }
@@ -82,16 +92,20 @@
             ctx.lineTo(60, 110);
           ctx.stroke();
       }
- 
-
- 
- ctx.beginPath();
- 
- ctx.moveTo(30, 90);
- 
- ctx.lineTo(0, 110);
- 
- ctx.stroke();
+      var leftLeg = function()
+      {
+          ctx.beginPath();
+           ctx.moveTo(30, 90);
+          ctx.lineTo(0, 110);
+         ctx.stroke();
+      }
+       var arms = function()
+       {
+       ctx.beginPath();
+          ctx.moveTo(0, 65);
+          ctx.lineTo(60, 65);
+       ctx.stroke();
+       }
           </script>
          </body>
          </html>
